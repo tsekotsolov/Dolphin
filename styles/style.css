@@ -190,6 +190,18 @@ body {
   padding: 0.4rem;
   background-color: transparent;
   width: 12rem;
+  caret-color: white;
+  color: white;
+  outline: none;
+}
+
+.form-container form .form-element input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+
+.form-container form .form-element input:-webkit-autofill, .form-container form .form-element input:-webkit-autofill:hover, .form-container form .form-element input:-webkit-autofill:focus, .form-container form .form-element input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 @media only screen and (max-width: 1440px) {

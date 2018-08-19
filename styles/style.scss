@@ -109,8 +109,7 @@ body {
   .form-header {
     display: flex;
     justify-content: space-between;
-
-    .form-header-language{
+    .form-header-language {
       background-color: #f49ac0;
       border-radius: 50%;
       font-size: 0.6rem;
@@ -121,41 +120,53 @@ body {
       justify-content: center;
     }
   }
-
-  form{
-    display:flex;
+  form {
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    .form-element{
+    .form-element {
       padding-top: 2rem;
-      label{
+      label {
         display: block;
         font-size: 0.6rem;
         padding: 0.4rem;
       }
-      input{
+      input {
         border-radius: 1rem;
         border-color: white;
         border-style: solid;
         padding: 0.4rem;
         background-color: transparent;
-        width:12rem;
-        
+        width: 12rem;
+        caret-color: white;
+        color: white;
+        outline: none;
+        &:-webkit-autofill {
+          -webkit-text-fill-color: white!important;
       }
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+      }
+
+      }
+      
+      
+      
     }
   }
-
- 
 }
 
 @media only screen and (max-width: 1440px) {
   html {
     font-size: 90%;
-  }  
+  }
 }
-@media only screen and (max-width: 992px) {
 
-  body{
+@media only screen and (max-width: 992px) {
+  body {
     overflow-y: auto;
   }
   html {
@@ -164,24 +175,21 @@ body {
   .video-wrapper {
     display: none;
   }
-
-  .form-container{
-    width:100%;
-    left:auto;
-    padding:1rem;
-    .row{
-      width:100%;
+  .form-container {
+    width: 100%;
+    left: auto;
+    padding: 1rem;
+    .row {
+      width: 100%;
     }
   }
-
-  .form-element{
-    padding-top: 1rem!important;
+  .form-element {
+    padding-top: 1rem !important;
   }
-  input{
-    width: 100%!important;
+  input {
+    width: 100% !important;
   }
-
-  .circles{
-    display:none;
+  .circles {
+    display: none;
   }
 }
