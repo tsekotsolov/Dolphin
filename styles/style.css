@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts//Montserrat-Regular.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: Montserrat;
+  line-height: 1.2;
+  color: #fff;
+  overflow: hidden;
+  background-color: #029ff3;
+}
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -9999;
+}
+
+.video-wrapper video {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: -7rem;
+  left: 5rem;
+  z-index: 2;
+  width: 12rem;
+  height: 12rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.logo .logo-image {
+  position: relative;
+  width: 65%;
+  top: 4rem;
+}
+
+.circles {
+  position: absolute;
+  top: 5rem;
+  right: 6rem;
+}
+
+.circles .discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 7rem;
+  height: 7rem;
+  background-color: #f49ac0;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 3;
+}
+
+.circles .monday {
+  position: relative;
+  top: -27px;
+  right: -57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 4rem;
+  height: 4rem;
+  background-color: #58e2ed;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.5rem;
+  z-index: 30;
+}
+
+.circles .monday :first-child {
+  font-size: 0.65rem;
+  font-weight: bold;
+}
+
+.circles .monday :nth-child(3),
+.circles .monday :nth-child(2) {
+  font-size: 0.4rem;
+}
+
+.form-container {
+  position: absolute;
+  top: 8rem;
+  left: 5rem;
+  width: 30%;
+}
+
+.form-container .form-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-container .form-header .form-header-language {
+  background-color: #f49ac0;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-container form .form-element {
+  padding-top: 2rem;
+}
+
+.form-container form .form-element label {
+  display: block;
+  font-size: 0.6rem;
+  padding: 0.4rem;
+}
+
+.form-container form .form-element input {
+  border-radius: 1rem;
+  border-color: white;
+  border-style: solid;
+  padding: 0.4rem;
+  background-color: transparent;
+  width: 12rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    overflow-y: auto;
+  }
+  html {
+    font-size: 85%;
+  }
+  .video-wrapper {
+    display: none;
+  }
+  .form-container {
+    width: 100%;
+    left: auto;
+    padding: 1rem;
+  }
+  .form-container .row {
+    width: 100%;
+  }
+  .form-element {
+    padding-top: 1rem !important;
+  }
+  input {
+    width: 100% !important;
+  }
+  .circles {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
