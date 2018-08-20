@@ -24,6 +24,9 @@ body {
   color: $text-color;
   overflow: hidden;
   background-color: $background-color;
+  background-image: url('../images/dolphin.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .video-wrapper {
@@ -103,9 +106,9 @@ body {
 
 .form-container {
   position: absolute;
-  top: 8rem;
+  top: 6rem;
   left: 5rem;
-  width: 30%;
+  width: 40%;
   .form-header {
     display: flex;
     justify-content: space-between;
@@ -124,42 +127,210 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0rem;
+    }
     .form-element {
-      padding-top: 2rem;
+      padding: 0.4rem;
+      width: 50%;
       label {
         display: block;
         font-size: 0.6rem;
         padding: 0.4rem;
       }
-      input {
+      .text {
         border-radius: 1rem;
         border-color: white;
         border-style: solid;
-        padding: 0.4rem;
+        padding: 0.6rem;
         background-color: transparent;
-        width: 12rem;
+        width: 100%;
         caret-color: white;
         color: white;
         outline: none;
         &:-webkit-autofill {
-          -webkit-text-fill-color: white!important;
+          -webkit-text-fill-color: white !important;
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+          transition: background-color 5000s ease-in-out 0s;
+        }
       }
-      &:-webkit-autofill,
-      &:-webkit-autofill:hover,
-      &:-webkit-autofill:focus,
-      &:-webkit-autofill:active {
-        transition: background-color 5000s ease-in-out 0s;
-      }
-
-      }
-      
-      
-      
     }
   }
 }
 
-@media only screen and (max-width: 1440px) {
+.icon {
+  position: relative;
+  i {
+    position: absolute;
+    top: 2.1rem;
+    left: 1rem;
+  }
+}
+
+.with-price {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  .prices {
+    width: 80%;
+  }
+  .digit {
+    font-size: 1.8rem;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+.manage-quantity {
+  display: flex;
+  align-items: center;
+  i {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+#dolphin-show {
+  background-color: white;
+  color: $background-color;
+  text-align: center;
+}
+
+.prices {
+  border-radius: 1rem;
+  border-color: white;
+  border: solid 2px;
+  padding: 0.6rem;
+  background-color: transparent;
+  width: 100%;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-text {
+  position: relative;
+  color: $background-color;
+  border: none;
+}
+
+.price-text::before {
+  top: -13px;
+  display: block;
+  content: '';
+  background-color: white;
+  border-radius: 1rem;
+  border: solid 1px white;
+  padding: 0.6rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -14px;
+  z-index: -5;
+}
+
+.agreement {
+  span {
+    font-size: 0.7rem;
+  }
+  .container {
+    font-size: 0.5rem;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+  }
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0.4rem;
+    left: 0;
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+  .container input:checked~.checkmark {
+    border: 2px solid white;
+  }
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked~.checkmark:after {
+    display: block;
+  }
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: white;
+  }
+}
+
+#submit{
+    background-color: $custom-blue!important;
+    border-style:none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.total{
+  color:white;
+  border-color:$custom-blue;
+  
+}
+
+.custom-price{
+  width: 100%!important;
+}
+
+.total::before{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-color:$custom-blue;
+  background-color: $custom-blue;
+
+}
+
+footer {
+  font-size: 0.7rem;
+  .payment-methods {
+    padding-top: 2rem;
+    padding-bottom: 0.8rem;
+  }
+  .contact-data {
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
   html {
     font-size: 90%;
   }
@@ -168,6 +339,7 @@ body {
 @media only screen and (max-width: 992px) {
   body {
     overflow-y: auto;
+    background-image: none;
   }
   html {
     font-size: 85%;
@@ -185,11 +357,18 @@ body {
   }
   .form-element {
     padding-top: 1rem !important;
+    width: 100% !important;
   }
-  input {
+  .text {
     width: 100% !important;
   }
   .circles {
-    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+  }
+  .price-text::before {
+    top: -10px;
+    left: -10px;
   }
 }

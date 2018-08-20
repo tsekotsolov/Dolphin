@@ -21,6 +21,9 @@ body {
   color: #fff;
   overflow: hidden;
   background-color: #029ff3;
+  background-image: url("../images/dolphin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .video-wrapper {
@@ -131,9 +134,9 @@ body {
 
 .form-container {
   position: absolute;
-  top: 8rem;
+  top: 6rem;
   left: 5rem;
-  width: 30%;
+  width: 40%;
 }
 
 .form-container .form-header {
@@ -173,8 +176,22 @@ body {
       flex-wrap: wrap;
 }
 
+.form-container form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 0rem;
+}
+
 .form-container form .form-element {
-  padding-top: 2rem;
+  padding: 0.4rem;
+  width: 50%;
 }
 
 .form-container form .form-element label {
@@ -183,28 +200,216 @@ body {
   padding: 0.4rem;
 }
 
-.form-container form .form-element input {
+.form-container form .form-element .text {
   border-radius: 1rem;
   border-color: white;
   border-style: solid;
-  padding: 0.4rem;
+  padding: 0.6rem;
   background-color: transparent;
-  width: 12rem;
+  width: 100%;
   caret-color: white;
   color: white;
   outline: none;
 }
 
-.form-container form .form-element input:-webkit-autofill {
+.form-container form .form-element .text:-webkit-autofill {
   -webkit-text-fill-color: white !important;
 }
 
-.form-container form .form-element input:-webkit-autofill, .form-container form .form-element input:-webkit-autofill:hover, .form-container form .form-element input:-webkit-autofill:focus, .form-container form .form-element input:-webkit-autofill:active {
+.form-container form .form-element .text:-webkit-autofill, .form-container form .form-element .text:-webkit-autofill:hover, .form-container form .form-element .text:-webkit-autofill:focus, .form-container form .form-element .text:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-@media only screen and (max-width: 1440px) {
+.icon {
+  position: relative;
+}
+
+.icon i {
+  position: absolute;
+  top: 2.1rem;
+  left: 1rem;
+}
+
+.with-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.with-price .prices {
+  width: 80%;
+}
+
+.with-price .digit {
+  font-size: 1.8rem;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.manage-quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.manage-quantity i {
+  display: block;
+  cursor: pointer;
+}
+
+#dolphin-show {
+  background-color: white;
+  color: #029ff3;
+  text-align: center;
+}
+
+.prices {
+  border-radius: 1rem;
+  border-color: white;
+  border: solid 2px;
+  padding: 0.6rem;
+  background-color: transparent;
+  width: 100%;
+  font-size: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price-text {
+  position: relative;
+  color: #029ff3;
+  border: none;
+}
+
+.price-text::before {
+  top: -13px;
+  display: block;
+  content: '';
+  background-color: white;
+  border-radius: 1rem;
+  border: solid 1px white;
+  padding: 0.6rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -14px;
+  z-index: -5;
+}
+
+.agreement {
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+
+.agreement span {
+  font-size: 0.7rem;
+}
+
+.agreement .container {
+  font-size: 0.5rem;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.agreement .container input {
+  position: absolute;
+  opacity: 0;
+}
+
+.agreement .checkmark {
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.agreement .container input:checked ~ .checkmark {
+  border: 2px solid white;
+}
+
+.agreement .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.agreement .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.agreement .container .checkmark:after {
+  top: 0.1rem;
+  left: 0.1rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: white;
+}
+
+#submit {
+  background-color: #58e2ed !important;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+}
+
+.total {
+  color: white;
+  border-color: #58e2ed;
+}
+
+.custom-price {
+  width: 100% !important;
+}
+
+.total::before {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-color: #58e2ed;
+  background-color: #58e2ed;
+}
+
+footer {
+  font-size: 0.7rem;
+}
+
+footer .payment-methods {
+  padding-top: 2rem;
+  padding-bottom: 0.8rem;
+}
+
+footer .contact-data {
+  padding-bottom: 0.8rem;
+}
+
+@media only screen and (max-width: 1200px) {
   html {
     font-size: 90%;
   }
@@ -213,6 +418,7 @@ body {
 @media only screen and (max-width: 992px) {
   body {
     overflow-y: auto;
+    background-image: none;
   }
   html {
     font-size: 85%;
@@ -230,12 +436,19 @@ body {
   }
   .form-element {
     padding-top: 1rem !important;
+    width: 100% !important;
   }
-  input {
+  .text {
     width: 100% !important;
   }
   .circles {
-    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+  }
+  .price-text::before {
+    top: -10px;
+    left: -10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
