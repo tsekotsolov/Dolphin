@@ -20,7 +20,7 @@ html {
 body {
   font-size: 1rem;
   font-family: Montserrat;
-  line-height: 1.2;
+  line-height: 1.1;
   color: $text-color;
   overflow: hidden;
   background-color: $background-color;
@@ -132,10 +132,10 @@ body {
       flex-wrap: wrap;
       justify-content: space-between;
       width: 100%;
-      margin: 0rem;
+      margin: 0.2rem;
     }
     .form-element {
-      padding: 0.4rem;
+      padding: 0.2rem;
       width: 50%;
       label {
         display: block;
@@ -316,17 +316,18 @@ body {
   border-bottom-right-radius: 0;
   border-right-color:$custom-blue;
   background-color: $custom-blue;
+ border-color:$custom-blue;
 
 }
 
 footer {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   .payment-methods {
-    padding-top: 2rem;
-    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.6rem;
   }
   .contact-data {
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.6rem;
   }
 }
 
