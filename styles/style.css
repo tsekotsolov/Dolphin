@@ -19,7 +19,7 @@ body {
   font-family: Montserrat;
   line-height: 1.1;
   color: #fff;
-  overflow: hidden;
+  overflow-y: scroll;
   background-color: #029ff3;
   background-image: url("../images/dolphin.png");
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: -7rem;
+  top: -8rem;
   left: 5rem;
   z-index: 2;
   width: 12rem;
