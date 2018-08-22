@@ -1,3 +1,4 @@
+
 let calculateSum = () => {
   let photosQty = $('#photos-qty').text() * 1
   let adultsTicketsQty = $('#adults-qty').text() * 1
@@ -43,6 +44,11 @@ $('#submit').click((e) => {
   let timePicker = $('#hour')
   let success = true
 
+  let validateEmail = (email) => {
+    let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(email)
+  }
+  
   name.css('border-color', 'white')
   mail.css('border-color', 'white')
   checked.css('border-color', 'white')
@@ -54,7 +60,7 @@ $('#submit').click((e) => {
     success = false
   }
 
-  if (!mail.val()) {
+  if (!validateEmail(mail.val())) {
     mail.css('border-color', 'red')
     success = false
   }
@@ -78,4 +84,3 @@ $('#submit').click((e) => {
     $('#submit').val('ПРИЯТНО ГЛЕДАНЕ')
   }
 })
-
