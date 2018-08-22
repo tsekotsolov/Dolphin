@@ -231,6 +231,59 @@ body {
   left: 1rem;
 }
 
+#datepicker, #hour {
+  padding-left: 3rem;
+}
+
+#ui-datepicker-div {
+  border-radius: 1.1rem;
+  border: 3px solid #58e2ed;
+  font-family: Montserrat;
+  font-size: .8rem;
+}
+
+#ui-datepicker-div .ui-datepicker-header {
+  background-color: #58e2ed;
+  border-radius: 1.1rem;
+}
+
+#ui-datepicker-div .ui-state-highlight {
+  border: 1px solid #029ff3;
+  background: #029ff3;
+  color: white;
+}
+
+#ui-datepicker-div .ui-state-active {
+  border: 1px solid #f49ac0;
+  background: #f49ac0;
+}
+
+#ui-datepicker-div .ui-state-disabled {
+  background-color: #58e2ed;
+}
+
+.ui-timepicker-wrapper {
+  background-color: #58e2ed;
+  font-family: Montserrat;
+  font-size: .8rem;
+  border-radius: 0.2rem;
+}
+
+.ui-timepicker-wrapper li {
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.ui-timepicker-wrapper li:hover {
+  background-color: #f49ac0 !important;
+}
+
+.ui-timepicker-wrapper .ui-timepicker-selected {
+  background-color: #f49ac0;
+}
+
 .with-price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,8 +299,12 @@ body {
   width: 80%;
 }
 
+.with-price .prices .center-price {
+  margin: auto;
+}
+
 .with-price .digit {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin-left: 8px;
   margin-right: 8px;
 }
@@ -341,7 +398,7 @@ body {
 
 .agreement .checkmark {
   position: absolute;
-  top: 0.4rem;
+  top: 0.3rem;
   left: 0;
   height: 0.9rem;
   width: 0.9rem;
@@ -375,7 +432,7 @@ body {
 
 #submit {
   background-color: #58e2ed !important;
-  border-style: none;
+  border-color: #58e2ed !important;
   color: white;
   cursor: pointer;
 }

@@ -8,23 +8,23 @@
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/vendor/jquery-ui.css">
+  <link rel="stylesheet" href="/styles/vendor/jquery.timepicker.min.css">
   <link rel="stylesheet" href="./styles/style.css">
+ 
   <title>Dolphinarium</title>
 </head>
 
 <body>
-
   <div class="video-wrapper">
     <video autoplay loop>
       <source src="/video/background-video.mp4" type="video/mp4">
     </video>
   </div>
-
-  <header>
-    <div class="logo">
+  <header >
+    <div class="logo" id="effect-header">
       <img class="logo-image" src="./images/logo.png" alt="logo">
     </div>
-
     <div class="circles">
       <p class="discount">15%
         <span>отстъпка</span>
@@ -35,17 +35,13 @@
         <span> понеделник</span>
       </p>
     </div>
-
   </header>
-
-  <div class="form-container">
-    <div class="form-header">
+  <div class="form-container" >
+    <div class="form-header"  id="effect-form-header">
       <p class="form-header-text">Купи билети онлайн</p>
       <p class="form-header-language">EN</p>
     </div>
-
-    <form action="">
-
+    <form action="" id="effect-form">
       <div class="row">
         <div class="form-element">
           <label for="name">Имена</label>
@@ -55,19 +51,15 @@
           <label for="email">Имейл</label>
           <input class="text" type="email" name="email" id="email" />
         </div>
-
       </div>
-
       <div class="row">
-
         <div class="form-element">
           <div class="icon">
             <label for="date">Дата</label>
-            <input class="text" type="text" name="name" id="date" />
+            <input class="text" name="name" id="datepicker" />
             <i class="far fa-calendar-alt"></i>
           </div>
         </div>
-
         <div class="form-element">
           <div class="icon">
             <label for="hour">Час</label>
@@ -75,14 +67,11 @@
             <i class="far fa-clock"></i>
           </div>
         </div>
-
       </div>
-
       <div class="row">
         <div class="form-element">
           <input class="text" type="text" id="dolphin-show" name="name" id="show" value="Шоу с делфини" disabled/>
         </div>
-
         <div class="form-element photos with-price">
           <div class="prices">
             <span class="price-text">Право за снимане</span>
@@ -91,13 +80,12 @@
           <div class="manage-quantity">
             <div id="photos-qty" class="digit">0</div>
             <div>
-              <i class="fas fa-chevron-up"></i>
-              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-chevron-up" id="photo-up" onclick="increaseQty(event.target)"></i>
+              <i class="fas fa-chevron-down" id="photo-down" onclick="decreaseQty(event.target)"></i>
             </div>
           </div>
         </div>
       </div>
-
       <div class="row">
         <div class="form-element with-price">
           <div class="prices">
@@ -107,8 +95,8 @@
           <div class="manage-quantity">
             <div id="adults-qty" class="digit">0</div>
             <div>
-              <i class="fas fa-chevron-up"></i>
-              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-chevron-up" onclick="increaseQty(event.target)"></i>
+              <i class="fas fa-chevron-down" onclick="decreaseQty(event.target)"></i>
             </div>
           </div>
         </div>
@@ -120,65 +108,65 @@
           <div class="manage-quantity">
             <div id="kids-qty" class="digit">0</div>
             <div>
-              <i class="fas fa-chevron-up"></i>
-              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-chevron-up" onclick="increaseQty(event.target)"></i>
+              <i class="fas fa-chevron-down" onclick="decreaseQty(event.target)"></i>
             </div>
           </div>
         </div>
       </div>
-
       <div class="agreement">
         <label class="container">
           <span>Съгласен съм с условията на резервация</span>
-          <input type="radio" checked="checked" name="radio">
-          <span class="checkmark"></span>
+          <input type="checkbox" name="radio" id="radio">
+          <span class="checkmark" id="checkmark"></span>
         </label>
       </div>
-
       <div class="row">
-        
-
         <div class="form-element with-price">
           <div class="prices total custom-price">
-            <span class="price-text total">ОБЩО</span>
-            <span id="total-price">0 лв.</span>
+            <span class="price-text total">Общо</span>
+            <div class="center-price">
+              <span id="total-price">0.00</span>
+              <span>лв.</span>
+            </div>
           </div>
-          
         </div>
-
         <div class="form-element">
           <input class="text" type="submit" name="name" id="submit" value="КЪМ ПЛАЩАНЕ" />
         </div>
-
       </div>
-
     </form>
-
-    <footer>
-        <div class="payment-methods">
-            <div class="pay-pal">
-              <img src="./images//payment/paypal.png" alt="paypal logo">
-            </div>
-            <div class="other-paymemts">
-              <img src="./images//payment/mastercard.png" alt="mastercard logo">
-              <img src="./images//payment/visa.png" alt="visa logo">
-              <img src="./images//payment/amex.png" alt="amex logo">
-              <img src="./images//payment/discover.png" alt="discover logo">
-            </div>
-          </div>
-
-          <div class="contacts">
-            <div class="contact-data">адрес: Приморски парк, местност “Салтанат”, 9000, гр. Варна</div>
-            <div class="contact-data">тел/факс: +359 52 302199</div>
-            <div class="contact-data">имейл: info@dolphinariumvarna.bg</div>
-            <div class="contact-data">GPS: +43 211 1213 1123123 123</div>
-          </div>
+    <footer id="effect-footer">
+      <div class="payment-methods">
+        <div class="pay-pal">
+          <img src="./images/payment/paypal.png" alt="paypal logo">
+        </div>
+        <div class="other-paymemts">
+          <img src="./images/payment/mastercard.png" alt="mastercard logo">
+          <img src="./images/payment/visa.png" alt="visa logo">
+          <img src="./images/payment/amex.png" alt="amex logo">
+          <img src="./images/payment/discover.png" alt="discover logo">
+        </div>
+      </div>
+  
+  
+      <div class="contacts">
+        <div class="contact-data">адрес: Приморски парк, местност “Салтанат”, 9000, гр. Варна</div>
+        <div class="contact-data">тел/факс: +359 52 302199</div>
+        <div class="contact-data">имейл: info@dolphinariumvarna.bg</div>
+        <div class="contact-data">GPS: +43 211 1213 1123123 123</div>
+      </div>
     </footer>
-    
-
-
 
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="./scripts/vendor/jquery-ui.js"></script>
+  <script src="./scripts/vendor/jquery.timepicker.js"></script>
+  <script src="./scripts/dateTimePicker.js"></script>
+  <script src="./scripts/effects.js"></script>
+  <script src="./scripts/script.js"></script>
 
 </body>
 

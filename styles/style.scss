@@ -175,15 +175,70 @@ body {
   }
 }
 
+#datepicker,#hour{
+  padding-left: 3rem;
+}
+
+#ui-datepicker-div{
+
+  border-radius: 1.1rem;
+  border: 3px solid $custom-blue;
+  font-family: Montserrat;
+  font-size: .8rem;
+
+  .ui-datepicker-header{
+    background-color:$custom-blue;
+    border-radius: 1.1rem;
+  }
+
+  .ui-state-highlight{
+    border: 1px solid $background-color;
+    background:  $background-color;
+    color: white;
+  }
+
+  .ui-state-active{
+    border: 1px solid $custom-pink;
+    background:  $custom-pink;
+  }
+
+  .ui-state-disabled{
+    background-color: #58e2ed;
+  }
+}
+
+.ui-timepicker-wrapper{
+  background-color: #58e2ed;
+  font-family: Montserrat;
+  font-size: .8rem;
+  border-radius:0.2rem;
+  li{
+    color:white;
+    border-bottom:1px solid white;
+    padding: 0.5rem;
+    text-align: center;
+    &:hover{
+      background-color:$custom-pink!important;
+    }
+  }
+
+  .ui-timepicker-selected{
+    background-color:$custom-pink;
+  }
+}
 .with-price {
   display: flex;
   flex-wrap: no-wrap;
   justify-content: space-between;
   .prices {
     width: 80%;
+    .center-price{
+      margin: auto;
+    }
+    
   }
   .digit {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     margin-left: 8px;
     margin-right: 8px;
   }
@@ -261,7 +316,7 @@ body {
   /* Create a custom radio button */
   .checkmark {
     position: absolute;
-    top: 0.4rem;
+    top: 0.3rem;
     left: 0;
     height: 0.9rem;
     width: 0.9rem;
@@ -295,7 +350,7 @@ body {
 
 #submit{
     background-color: $custom-blue!important;
-    border-style:none;
+    border-color:$custom-blue!important;
     color: white;
     cursor: pointer;
 }
