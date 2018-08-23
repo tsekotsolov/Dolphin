@@ -21,9 +21,49 @@ body {
   color: #fff;
   overflow-y: scroll;
   background-color: #029ff3;
-  background-image: url("../images/dolphin.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+@-webkit-keyframes greyscale-fade-in {
+  0% {
+    -webkit-filter: grayscale(100%);
+  }
+  100% {
+    -webkit-filter: grayscale(0%);
+  }
+}
+
+@keyframes greyscale-fade-in {
+  0% {
+    -webkit-filter: grayscale(100%);
+  }
+  100% {
+    -webkit-filter: grayscale(0%);
+  }
+}
+
+.logo-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  -webkit-animation: greyscale-fade-in 2s ease-in forwards;
+          animation: greyscale-fade-in 2s ease-in forwards;
+  background: white;
+  z-index: 2000;
+}
+
+.logo-wrapper img {
+  width: 40%;
 }
 
 .video-wrapper {
@@ -137,6 +177,7 @@ body {
   top: 6rem;
   left: 5rem;
   width: 40%;
+  z-index: -2000;
 }
 
 .form-container .form-header {
@@ -231,7 +272,8 @@ body {
   left: 1rem;
 }
 
-#datepicker, #hour {
+#datepicker,
+#hour {
   padding-left: 3rem;
 }
 
@@ -482,6 +524,9 @@ footer .contact-data {
     font-size: 85%;
   }
   .video-wrapper {
+    display: none;
+  }
+  video {
     display: none;
   }
   .form-container {

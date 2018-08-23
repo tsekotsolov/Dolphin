@@ -11,17 +11,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" href="/styles/vendor/jquery.timepicker.min.css">
   <link rel="stylesheet" href="./styles/style.css">
- 
+
   <title>Dolphinarium</title>
 </head>
 
 <body>
-  <div class="video-wrapper">
-    <video autoplay loop>
+  <div class="logo-wrapper" id="logo-fader">
+    <img src="./images/logo.png" alt="">
+  </div>
+  <div class="video-wrapper" id="video">
+    <video autoplay="true" loop>
       <source src="/video/background-video.mp4" type="video/mp4">
     </video>
   </div>
-  <header >
+  <header>
     <div class="logo" id="effect-header">
       <img class="logo-image" src="./images/logo.png" alt="logo">
     </div>
@@ -36,8 +39,8 @@
       </p>
     </div>
   </header>
-  <div class="form-container" >
-    <div class="form-header"  id="effect-form-header">
+  <div class="form-container">
+    <div class="form-header" id="effect-form-header">
       <p class="form-header-text">Купи билети онлайн</p>
       <p class="form-header-language">EN</p>
     </div>
@@ -148,8 +151,7 @@
           <img src="./images/payment/discover.png" alt="discover logo">
         </div>
       </div>
-  
-  
+
       <div class="contacts">
         <div class="contact-data">адрес: Приморски парк, местност “Салтанат”, 9000, гр. Варна</div>
         <div class="contact-data">тел/факс: +359 52 302199</div>
@@ -161,11 +163,9 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
   <script src="./scripts/vendor/jquery.timepicker.js"></script>
   <script src="./scripts/dateTimePicker.js"></script>
   <script src="./scripts/effects.js"></script>

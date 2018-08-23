@@ -1,4 +1,4 @@
-$( ()=> {
+$(() => {
   // run the currently selected effect
   let runEffect = () => {
     // get effect type from
@@ -12,10 +12,11 @@ $( ()=> {
     }
 
     // Run the effect
-    $('#effect-header').effect(selectedEffect, 1000, callback)
-    $('#effect-form-header').effect(selectedEffect, 1500, callback)
-    $('#effect-form').effect(selectedEffect, 2500, callback)
-    $('#effect-footer').effect(selectedEffect, 3500, callback)
+    $('#video').effect(selectedEffect, 3000, callback)
+    $('#effect-header').effect(selectedEffect, 3500, callback)
+    $('#effect-form-header').effect(selectedEffect, 4000, callback)
+    $('#effect-form').effect(selectedEffect, 4500, callback)
+    $('#effect-footer').effect(selectedEffect, 5000, callback)
   }
 
   $('document').ready(() => {

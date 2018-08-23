@@ -45,10 +45,10 @@ $('#submit').click((e) => {
   let success = true
 
   let validateEmail = (email) => {
-    let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    return re.test(email)
+    let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return regex.test(email)
   }
-  
+
   name.css('border-color', 'white')
   mail.css('border-color', 'white')
   checked.css('border-color', 'white')
@@ -83,4 +83,10 @@ $('#submit').click((e) => {
   if (success) {
     $('#submit').val('ПРИЯТНО ГЛЕДАНЕ')
   }
+})
+
+$(() => {
+  setTimeout(function () {
+    $('#logo-fader').css('display', 'none')
+  }, 2500)
 })
