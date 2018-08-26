@@ -83,8 +83,8 @@
           <div class="manage-quantity">
             <div id="photos-qty" class="digit">0</div>
             <div>
-              <i class="fas fa-chevron-up" id="photo-up" onclick="increaseQty(event.target)"></i>
-              <i class="fas fa-chevron-down" id="photo-down" onclick="decreaseQty(event.target)"></i>
+              <i class="fas fa-chevron-up" id="photo-up" onclick="formMethods.increaseQty(event)"></i>
+              <i class="fas fa-chevron-down" id="photo-down" onclick="formMethods.decreaseQty(event)"></i>
             </div>
           </div>
         </div>
@@ -98,8 +98,8 @@
           <div class="manage-quantity">
             <div id="adults-qty" class="digit">0</div>
             <div>
-              <i class="fas fa-chevron-up" onclick="increaseQty(event.target)"></i>
-              <i class="fas fa-chevron-down" onclick="decreaseQty(event.target)"></i>
+              <i class="fas fa-chevron-up" onclick="formMethods.increaseQty(event)"></i>
+              <i class="fas fa-chevron-down" onclick="formMethods.decreaseQty(event)"></i>
             </div>
           </div>
         </div>
@@ -111,8 +111,8 @@
           <div class="manage-quantity">
             <div id="kids-qty" class="digit">0</div>
             <div>
-              <i class="fas fa-chevron-up" onclick="increaseQty(event.target)"></i>
-              <i class="fas fa-chevron-down" onclick="decreaseQty(event.target)"></i>
+              <i class="fas fa-chevron-up" onclick="formMethods.increaseQty(event)"></i>
+              <i class="fas fa-chevron-down" onclick="formMethods.decreaseQty(event)"></i>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@
           </div>
         </div>
         <div class="form-element">
-          <input class="text" type="submit" name="name" id="submit" value="КЪМ ПЛАЩАНЕ" />
+          <input class="text" type="submit" name="name" id="submit" value="КЪМ ПЛАЩАНЕ" onclick="formMethods.submit(event)"/>
         </div>
       </div>
     </form>
@@ -159,7 +159,6 @@
         <div class="contact-data">GPS: +43 211 1213 1123123 123</div>
       </div>
     </footer>
-
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -169,8 +168,7 @@
   <script src="./scripts/vendor/jquery.timepicker.js"></script>
   <script src="./scripts/dateTimePicker.js"></script>
   <script src="./scripts/effects.js"></script>
-  <script src="./scripts/script.js"></script>
-
+  <script src="./scripts/formMethods.js"></script>
 </body>
 
 </html>

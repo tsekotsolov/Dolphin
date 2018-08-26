@@ -21,6 +21,9 @@ $(() => {
 
   $('document').ready(() => {
     runEffect()
+    setTimeout(() => {
+      $('#logo-fader').css('display', 'none')
+    }, 2500)
     return false
   })
 })
